@@ -197,8 +197,157 @@ def initialize():
          
 
     print('Start position reached')
-    
-    
+
+# set the position and direction
+def set():
+    start_position = np.array ([[ 0.627 , 0.-4.71 ,  0.619 ,  x ],[-0.46 , -0.86, -0.18 , y],[ 0.62 , -0.17, -0.76, z],[ 0 ,  0,  0 ,  1.0]])
+        
+         # move robot according to mode
+    if robotMode == 'SmartServo':
+             
+       poseStringForRobot = hR.make_cmd("MovePTPHomRowWiseMinChangeRT", start_position)
+             
+    else:
+             
+       poseStringForRobot = hR.make_cmd("MovePTPHomRowWiseMinChange", start_position)
+                 
+         # command pose to robot
+    hR.command(s, BUFFER_SIZE, poseStringForRobot)
+         
+         # wait until position is reached (can be adjusted...)
+    hR.delay(delayBetweenPoses)
+
+         ## save volumes and robot data
+         
+    timestamp = hR.millis()
+         
+    worldToToolMeas = hR.getWorldToTool(s, BUFFER_SIZE, flangeToProbeXL143)
+    print('worldToToolMeas:  ', worldToToolMeas)
+         
+    jointPos = hR.getJointPos(s, BUFFER_SIZE)
+    print('jointPos:  ', jointPos)
+         
+    jointTorques = hR.getJointTorques(s, BUFFER_SIZE)
+    print('jointTorques:  ', jointTorques)
+         
+    jointExtTorques = hR.getJointTorques(s, BUFFER_SIZE)
+    print('jointExtTorques:  ', jointTorques)
+         
+    forceTorqueEE = hR.getForceTorque(s, BUFFER_SIZE)
+    print('forceTorqueEE', forceTorqueEE)
+         
+
+    print('Position reached')
+
+def incline(degrees):
+    new = hR.getWorldToTool(s, BUFFER_SIZE, flangeToProbeXL143)
+    radian=math.radians(degrees)
+    # around y axis
+      # Matrix Multiplication
+    result=np.matmul(new,hR.rotyHMD(degrees))
+      # change the Matrix
+    new[0,0] = new[0,0] + math.cos(radian)
+    new[0,2] = new[0,2] + math.sin(radian)
+    new[2,0] = new[2,0] - math.sin(radian)
+    new[2,2] = new[2,2] + math.cos(radian)
+
+     
+    worldToFlangeCommand = np.matmul(result, hR.homInv(flangeToProbeXL143))
+
+    # move robot according to mode
+    if robotMode == 'SmartServo':
+        
+        poseStringForRobot = hR.make_cmd("MovePTPHomRowWiseMinChangeRT", worldToFlangeCommand)
+        
+    else:
+        
+        poseStringForRobot = hR.make_cmd("MovePTPHomRowWiseMinChange", worldToFlangeCommand)
+            
+    # command pose to robot
+    hR.command(s, BUFFER_SIZE, poseStringForRobot)
+
+    # wait until position is reached (can be adjusted...)
+    hR.delay(delayBetweenPoses)
+
+    ## save volumes and robot data
+
+    timestamp = hR.millis()
+
+    worldToToolMeas = hR.getWorldToTool(s, BUFFER_SIZE, flangeToProbeXL143)
+    print('worldToToolMeas:  ', worldToToolMeas)
+
+    jointPos = hR.getJointPos(s, BUFFER_SIZE)
+    print('jointPos:  ', jointPos)
+
+    jointTorques = hR.getJointTorques(s, BUFFER_SIZE)
+    print('jointTorques:  ', jointTorques)
+
+    jointExtTorques = hR.getJointTorques(s, BUFFER_SIZE)
+    print('jointExtTorques:  ', jointTorques)
+
+    forceTorqueEE = hR.getForceTorque(s, BUFFER_SIZE)
+    print('forceTorqueEE', forceTorqueEE)
+
+    print(' finish incline')
+
+def rotate(y,z):
+    new = hR.getWorldToTool(s, BUFFER_SIZE, flangeToProbeXL143)
+    radianY=math.radians(y)
+    radianZ=math.radians(z)
+    # around y axis
+      # Martix multiplication
+    resultR = np.matmul(hR.rotyHMD(y),hR.rotzHMD(z))
+    result = np.matmul(new,resultR)
+      # change the Martix
+    new[0,0] = new[0,0] + math.cos(radianY)*math.cos(radianZ)
+    new[0,1] = new[0,1] - math.cos(radianY)*math.sin(radianZ)
+    new[0,2] = new[0,2] + math.sin(radianY)
+
+    new[1,0] = new[1,0] + math.sin(radianZ)
+    new[1,1] = new[1,1] + math.cos(radianZ)
+
+    new[2,0] = new[2,0] - math.sin(radianY)*math.cos(radianZ)
+    new[2,1] = new[2,1] + math.sin(radianY)*math.sin(radianZ)
+    new[2,2] = new[2,2] + math.cos(radianY)
+
+     
+    worldToFlangeCommand = np.matmul(result, hR.homInv(flangeToProbeXL143))
+
+    # move robot according to mode
+    if robotMode == 'SmartServo':
+        
+        poseStringForRobot = hR.make_cmd("MovePTPHomRowWiseMinChangeRT", worldToFlangeCommand)
+        
+    else:
+        
+        poseStringForRobot = hR.make_cmd("MovePTPHomRowWiseMinChange", worldToFlangeCommand)
+            
+    # command pose to robot
+    hR.command(s, BUFFER_SIZE, poseStringForRobot)
+
+    # wait until position is reached (can be adjusted...)
+    hR.delay(delayBetweenPoses)
+
+    ## save volumes and robot data
+
+    timestamp = hR.millis()
+
+    worldToToolMeas = hR.getWorldToTool(s, BUFFER_SIZE, flangeToProbeXL143)
+    print('worldToToolMeas:  ', worldToToolMeas)
+
+    jointPos = hR.getJointPos(s, BUFFER_SIZE)
+    print('jointPos:  ', jointPos)
+
+    jointTorques = hR.getJointTorques(s, BUFFER_SIZE)
+    print('jointTorques:  ', jointTorques)
+
+    jointExtTorques = hR.getJointTorques(s, BUFFER_SIZE)
+    print('jointExtTorques:  ', jointTorques)
+
+    forceTorqueEE = hR.getForceTorque(s, BUFFER_SIZE)
+    print('forceTorqueEE', forceTorqueEE)
+
+    print(' finish incline')
     
     
 ## set up port for robot connection
@@ -265,191 +414,26 @@ hR.delay(5000)
 # saving the robot stat and the us images.
 delayBetweenPoses = 1500 # in ms
 
-#def movementalong x
 
-# =============================================================================
-# ###Move in loops
-# x = int(input("movement in x direction"))
-# y = int(input("movement in y direction"))
-# z = int(input("movement in z direction"))
-# loops = int(input("number of loops"))
-#      
-# initialize()   
-# 
-# movez(-z)
-# for i in range(1,loops+1): # loop to move the robot in loops
-# 
-#     movement = (-1)**i
-#     
-#     movex( -movement * x)
-#     movey( y)
-#     
-# initialize()
-# =============================================================================
+# vertical move 
 
-#move in rectangle
-# =============================================================================
-# 
-# initialize()  
-# 
-# x = int(input("movement in x direction"))
-# y = int(input("movement in y direction"))
-# z = int(input("movement in z direction"))
-# loops = int(input("number of loops"))
-#      
-#  
-# 
-# movez(-z)
-# movex( x)
-# movey( y)
-# movex( -x)
-# y = y - 10
-# movey( -y)
-# 
-# for i in range(1,loops): # loop to move the robot in loops
-# 
-#     movement = (-1)**i
-#     
-#     x = x - 10
-#     movex( -movement * x)    
-# 
-#     y = y - 10
-#     movey( -movement * y)
-#     
-#     
-# initialize()
-# =============================================================================
+# set a start position and correct in vertical
+x = int(input("position of World in x direction"))
+y = int(input("position of World in y direction"))
+z = int(input("position of World in z direction"))
+set()
 
+# move along the z direction
+Lang = int(input("move strength of World in z direction"))
+movez(Lang)
 
-# =============================================================================
-# ###Move in L loops
-# 
-# x = int(input("movement in x direction"))
-# y = int(input("movement in y direction"))
-# z = int(input("movement in z direction"))
-# loops = int(input("number of loops"))
-#      
-# initialize()   
-# 
-# for i in range(1,loops+1):
-#     movez(-z)
-#     movex(x)
-#     movex(-x)
-#     movez(z)
-#     movey(y)
-#     
-# initialize()
-# =============================================================================
+# incline in degrees
+angle =int(input("incline in degress"))
+incline(angle)
 
-# =============================================================================
-# ###Move in L loops
-# 
-# x = int(input("movement in x direction"))
-# y = int(input("movement in y direction"))
-# z = int(input("movement in z direction"))
-# loops = int(input("number of loops"))
-#      
-# initialize()   
-# 
-# for i in range(1,loops+1):
-#     movez(-z)
-#     movex(x)
-#     movex(-x)
-#     movez(z)
-#     movey(y)
-#     
-# initialize()
-# =============================================================================
-
-
-
-
-
-
-
-
-
-
-############################## WARNING ########################################
-## script moves robot with us probe into +z direction for 20 mm (along the probe axis)
-## outgoing from its starting position
-
-## please make sure that the probe is accordingly mounted so that the 
-## transformation matrix 'flangeToProbeXL143' is correct. 
-###############################################################################
-# =============================================================================
-# new = hR.getWorldToTool(s, BUFFER_SIZE, flangeToProbeXL143)
-# 
-# for o in range(10):
-#      
-#      
-#      # go in z-direction of us probe
-#      #toolToNewTarget = np.identity(4)
-# 
-#      # Move Probe 20 mm into z-Direction of the probe
-#      #toolToNewTarget[0:3,0:3] = hR.rotxHMD(o+30)[0:3,0:3]
-#      #toolToNewTarget[1,3] = o*20
-#      
-#      #desired_position = np.array ([[ 0.627 , -0.471 ,  0.619 ,  1053.44 ],[-0.46 , -0.86, -0.18 , -28.59],[ 0.62 , -0.17, -0.76, -197.43+(-100*o)],[ 0 ,  0,  0 ,  1.0]])
-#      #desired_position = np.array ([[ 0.627 , -0.471 ,  0.619 ,  1053.44*math.cos((o+10)*math.pi/180)],[-0.46 , -0.86, -0.18 , -28.59*math.sin(o*math.pi/180)],[ 0.62 , -0.17, -0.76, -197.43],[ 0 ,  0,  0 ,  1.0]])
-# 
-#      #worldToNewTarget = np.matmul(new, toolToNewTarget)
-#      new[0,3] = new[0,3] + 10
-#      
-#       
-#      worldToFlangeCommand = np.matmul(new, hR.homInv(flangeToProbeXL143))
-#      
-#      # move robot according to mode
-#      if robotMode == 'SmartServo':
-#          
-#          poseStringForRobot = hR.make_cmd("MovePTPHomRowWiseMinChangeRT", worldToFlangeCommand)
-#          
-#      else:
-#          
-#          poseStringForRobot = hR.make_cmd("MovePTPHomRowWiseMinChange", worldToFlangeCommand)
-#              
-#      # command pose to robot
-#      hR.command(s, BUFFER_SIZE, poseStringForRobot)
-#      
-#      # wait until position is reached (can be adjusted...)
-#      hR.delay(delayBetweenPoses)
-# 
-#      ## save volumes and robot data
-#      
-#      timestamp = hR.millis()
-#      
-#      worldToToolMeas = hR.getWorldToTool(s, BUFFER_SIZE, flangeToProbeXL143)
-#      print('worldToToolMeas:  ', worldToToolMeas)
-#      
-#      jointPos = hR.getJointPos(s, BUFFER_SIZE)
-#      print('jointPos:  ', jointPos)
-#      
-#      jointTorques = hR.getJointTorques(s, BUFFER_SIZE)
-#      print('jointTorques:  ', jointTorques)
-#      
-#      jointExtTorques = hR.getJointTorques(s, BUFFER_SIZE)
-#      print('jointExtTorques:  ', jointTorques)
-#      
-#      forceTorqueEE = hR.getForceTorque(s, BUFFER_SIZE)
-#      print('forceTorqueEE', forceTorqueEE)
-#      
-#      message = client.wait_for_message("Image_Transducer", timeout=3)      
-#      
-#      dataExp['Timestamp'][countMeas] = timestamp
-#      dataExp['ProbePoseCommand'][countMeas] = desired_position
-#      dataExp['ProbePoseMeas'][countMeas] = worldToToolMeas
-#      dataExp['JointPos'][countMeas] = jointPos
-#      dataExp['JointTorques'][countMeas] = jointTorques
-#      dataExp['JointExtTorques'][countMeas] = jointExtTorques
-#      dataExp['ForceTorqueEE'][countMeas] = forceTorqueEE
-#      #dataExp['VolData'][countMeas] = message.image
-#      
-#      print('Measurement done. Data saved.')
-#      
-#      countMeas = countMeas + 1
-# =============================================================================
-     
-     
+# all in 360
+for i in range(361):
+    rotate(angle,i)
 
 
 
@@ -464,15 +448,3 @@ print("stopped")
 if saveData:
     date = datetime.now()
     np.save(expName+robotMode+date.strftime("_%d.%m.%Y_%H.%M.%S"), dataExp)
-
-
-
-
-
-
-
-
-
-
-
-
