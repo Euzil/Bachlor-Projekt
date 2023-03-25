@@ -1,0 +1,526 @@
+PS C:\Users\BA-Project Niclas> & "C:/Users/BA-Project Niclas/AppData/Local/Programs/Python/Python311/python.exe" "c:/Users/BA-Project Niclas/Desktop/acquiring-robot-us-data-main/acquiring-robot-us-data-main/acquireUSdataWithRobot_getStarted.py"
+b'false\r\n'
+b'true\r\n'
+b'true\r\n'
+b'true\r\n'
+b'true\r\n'
+b'true\r\n'
+b'true\r\n'
+b'true\r\n'
+b'true\r\n'
+startPoseTool:  [[-9.99950377e-01  3.27758960e-03 -8.32593244e-03  1.07256524e+03]
+ [ 3.30048846e-03  9.99990794e-01 -2.74181299e-03 -1.01235410e+02]
+ [ 8.31686926e-03 -2.76920970e-03 -9.99951989e-01 -1.49305191e+02]
+ [ 0.00000000e+00  0.00000000e+00  0.00000000e+00  1.00000000e+00]]
+b'true\r\n'
+jointTorques:   [[ -3.23964184 -51.56810796   2.47737499  19.13406826  -0.10124311
+   -0.42252962  -0.26032631]]
+jointExtTorques:   [[ -3.23964184 -51.56810796   2.47737499  19.13406826  -0.10124311
+   -0.42252962  -0.26032631]]
+Position reached
+b'true\r\n'
+move strength of World in z direction :20
+move strength of World in x direction :20
+incline in degress :45
+circle in degress :0
+b'true\r\n'
+SUM FORCE: -1.3174847418617759
+i : 0
+b'true\r\n'
+SUM FORCE: -0.9891850112821868
+i : 1
+b'true\r\n'
+SUM FORCE: -1.0358409685445666
+i : 2
+b'true\r\n'
+SUM FORCE: -1.2148243474866518
+i : 3
+b'true\r\n'
+SUM FORCE: -1.3526655976119615
+i : 4
+b'true\r\n'
+SUM FORCE: -1.2294623396059123
+i : 5
+b'true\r\n'
+SUM FORCE: -1.38765846572904
+i : 6
+b'true\r\n'
+SUM FORCE: -1.455419242217258
+i : 7
+b'true\r\n'
+SUM FORCE: -1.3868229716860565
+i : 8
+i : 9
+b'true\r\n'
+SUM FORCE: -1.4529217492621007
+i : 10
+b'true\r\n'
+SUM FORCE: -1.4137487660560006
+i : 11
+b'true\r\n'
+SUM FORCE: -1.4194855419839403
+i : 12
+b'true\r\n'
+SUM FORCE: -1.520363258407161
+i : 13
+Traceback (most recent call last):
+  File "c:\Users\BA-Project Niclas\Desktop\acquiring-robot-us-data-main\acquiring-robot-us-data-main\acquireUSdataWithRobot_getStarted.py", line 510, in <module>
+    movez(-1)
+  File "c:\Users\BA-Project Niclas\Desktop\acquiring-robot-us-data-main\acquiring-robot-us-data-main\acquireUSdataWithRobot_getStarted.py", line 140, in movez
+    hR.command(s, BUFFER_SIZE, poseStringForRobot)
+  File "c:\Users\BA-Project Niclas\Desktop\acquiring-robot-us-data-main\acquiring-robot-us-data-main\helperRobot.py", line 48, in command
+    print(s.recv(bufferSize))
+          ^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+PS C:\Users\BA-Project Niclas> & "C:/Users/BA-Project Niclas/AppData/Local/Programs/Python/Python311/python.exe" "c:/Users/BA-Project Niclas/Desktop/acquiring-robot-us-data-main/acquiring-robot-us-data-main/acquireUSdataWithRobot_getStarted.py"
+b'false\r\n'
+b'true\r\n'
+b'true\r\n'
+b'true\r\n'
+b'true\r\n'
+b'true\r\n'
+b'true\r\n'
+b'true\r\n'
+b'true\r\n'
+startPoseTool:  [[-9.99980072e-01  4.66982200e-04 -4.52289783e-03  1.07321119e+03]
+ [ 4.69996784e-04  9.99999668e-01 -6.66470741e-04 -9.97312693e+01]
+ [ 4.52258508e-03 -6.68596100e-04 -9.99979959e-01 -1.32815960e+02]
+ [ 0.00000000e+00  0.00000000e+00  0.00000000e+00  1.00000000e+00]]
+b'true\r\n'
+jointTorques:   [[ -3.22485509 -51.56004247   2.47913574  19.18336926  -0.16022823
+   -0.42786965  -0.25598754]]
+jointExtTorques:   [[ -3.22485509 -51.56004247   2.47913574  19.18336926  -0.16022823
+   -0.42786965  -0.25598754]]
+Position reached
+b'true\r\n'
+move strength of World in z direction :20
+move strength of World in x direction :20
+incline in degress :45
+circle in degress :0
+b'true\r\n'
+finish incline
+b'true\r\n'
+SUM FORCE: 1.0258631709422734
+i : 0
+b'true\r\n'
+SUM FORCE: -0.6307437108497181
+i : 1
+b'true\r\n'
+SUM FORCE: -1.256151716465212
+i : 2
+b'true\r\n'
+SUM FORCE: -1.6723900328205468
+i : 3
+b'true\r\n'
+SUM FORCE: -1.6892440547769925
+i : 4
+b'true\r\n'
+SUM FORCE: -1.7656730222915495
+i : 5
+b'true\r\n'
+SUM FORCE: -1.9453713872296343
+i : 6
+b'true\r\n'
+SUM FORCE: -1.8673699072987155
+i : 7
+b'true\r\n'
+SUM FORCE: -1.9090614944345972
+i : 8
+b'true\r\n'
+SUM FORCE: -1.9855666720612712
+i : 9
+b'true\r\n'
+SUM FORCE: -2.0061951579594175
+i : 10
+b'true\r\n'
+SUM FORCE: -2.021903354377593
+i : 11
+b'true\r\n'
+SUM FORCE: -2.0625306993370183
+i : 12
+b'true\r\n'
+SUM FORCE: -2.01683571109845
+SUM FORCE: -2.0679774624096727
+i : 14
+b'true\r\n'
+SUM FORCE: -2.123301555644513
+i : 15
+b'true\r\n'
+SUM FORCE: -2.063840816942696
+i : 16
+b'true\r\n'
+SUM FORCE: -2.0679837177446467
+i : 17
+b'true\r\n'
+SUM FORCE: -2.107949009713769
+i : 18
+b'true\r\n'
+SUM FORCE: -2.146935289011383
+i : 19
+Traceback (most recent call last):
+  File "c:\Users\BA-Project Niclas\Desktop\acquiring-robot-us-data-main\acquiring-robot-us-data-main\acquireUSdataWithRobot_getStarted.py", line 555, in <module>
+    print('distance:', distance)
+                       ^^^^^^^^
+NameError: name 'distance' is not defined. Did you mean: 'isinstance'?
+PS C:\Users\BA-Project Niclas> & "C:/Users/BA-Project Niclas/AppData/Local/Programs/Python/Python311/python.exe" "c:/Users/BA-Project Niclas/Desktop/acquiring-robot-us-data-main/acquiring-robot-us-data-main/acquireUSdataWithRobot_getStarted.py"
+b'false\r\n'
+b'true\r\n'
+b'true\r\n'
+b'true\r\n'
+b'true\r\n'
+b'true\r\n'
+b'true\r\n'
+b'true\r\n'
+b'true\r\n'
+startPoseTool:  [[-7.07669323e-01  8.47410000e-06 -7.06530218e-01  1.07451774e+03]
+ [-5.62802527e-04  9.99999676e-01  5.75703708e-04 -9.94797289e+01]
+ [ 7.06529994e-01  8.05060300e-04 -7.07669089e-01 -1.37226044e+02]
+ [ 0.00000000e+00  0.00000000e+00  0.00000000e+00  1.00000000e+00]]
+b'true\r\n'
+jointTorques:   [[ -3.24501884 -52.20662658   2.50994886  19.08476727  -0.11092724
+   -0.3784744   -0.25465253]]
+jointExtTorques:   [[ -3.24501884 -52.20662658   2.50994886  19.08476727  -0.11092724
+   -0.3784744   -0.25465253]]
+Position reached
+b'true\r\n'
+move strength of World in z direction :20
+move strength of World in x direction :20
+incline in degress :45
+circle in degress :0
+b'true\r\n'
+finish incline
+b'true\r\n'
+SUM FORCE: 1.0704137967613818
+i : 0
+b'true\r\n'
+SUM FORCE: -0.6878614869539079
+i : 1
+b'true\r\n'
+SUM FORCE: -1.2666815582380586
+i : 2
+b'true\r\n'
+SUM FORCE: -1.7317975350694255
+i : 3
+b'true\r\n'
+SUM FORCE: -1.8388077754323846
+i : 4
+b'true\r\n'
+SUM FORCE: -1.9081126037510994
+i : 5
+b'true\r\n'
+SUM FORCE: -2.0247539073297616
+i : 6
+b'true\r\n'
+SUM FORCE: -1.9471642716931012
+i : 7
+b'true\r\n'
+SUM FORCE: -2.123872227491599
+i : 8
+b'true\r\n'
+SUM FORCE: -2.0530340464020425
+i : 9
+b'true\r\n'
+SUM FORCE: -2.1007956196815165
+i : 10
+b'true\r\n'
+SUM FORCE: -2.115445013997329
+i : 11
+b'true\r\n'
+SUM FORCE: -2.0488183624590386
+i : 12
+b'true\r\n'
+SUM FORCE: -2.182915876001288
+SUM FORCE: -2.1018130349094837
+i : 14
+b'true\r\n'
+SUM FORCE: -2.1094310491608557
+i : 15
+b'true\r\n'
+SUM FORCE: -2.17885231552291
+i : 16
+b'true\r\n'
+SUM FORCE: -2.2650634746933296
+i : 17
+b'true\r\n'
+SUM FORCE: -2.2971455830193466
+i : 18
+b'true\r\n'
+SUM FORCE: -2.2768488421382838
+i : 19
+Traceback (most recent call last):
+  File "c:\Users\BA-Project Niclas\Desktop\acquiring-robot-us-data-main\acquiring-robot-us-data-main\acquireUSdataWithRobot_getStarted.py", line 555, in <module>
+    print('distance:', distance)
+                       ^^^^^^^^
+NameError: name 'distance' is not defined. Did you mean: 'isinstance'?
+PS C:\Users\BA-Project Niclas> & "C:/Users/BA-Project Niclas/AppData/Local/Programs/Python/Python311/python.exe" "c:/Users/BA-Project Niclas/Desktop/acquiring-robot-us-data-main/acquiring-robot-us-data-main/acquireUSdataWithRobot_getStarted.py"
+b'false\r\n'
+b'true\r\n'
+b'true\r\n'
+b'true\r\n'
+b'true\r\n'
+b'true\r\n'
+b'true\r\n'
+b'true\r\n'
+b'true\r\n'
+startPoseTool:  [[-7.08620733e-01  2.28873400e-04 -7.05575952e-01  1.07477247e+03]
+ [-1.44704904e-04  9.99999879e-01  4.69701216e-04 -9.96232776e+01]
+ [ 7.05575975e-01  4.34948700e-04 -7.08620614e-01 -1.36958833e+02]
+ [ 0.00000000e+00  0.00000000e+00  0.00000000e+00  1.00000000e+00]]
+b'true\r\n'
+jointTorques:   [[ -3.26787108 -52.20662658   2.45712637  18.9993709   -0.14438148
+   -0.38848695  -0.25298377]]
+jointExtTorques:   [[ -3.26787108 -52.20662658   2.45712637  18.9993709   -0.14438148
+   -0.38848695  -0.25298377]]
+Position reached
+b'true\r\n'
+move strength of World in z direction :20
+move strength of World in x direction :20
+incline in degress :45
+circle in degress :0
+b'true\r\n'
+finish incline
+b'true\r\n'
+SUM FORCE: 1.058431471304338
+i : 0
+b'true\r\n'
+SUM FORCE: -0.6595443297501167
+i : 1
+b'true\r\n'
+SUM FORCE: -1.158669504209471
+i : 2
+b'true\r\n'
+SUM FORCE: -1.4238854451523049
+i : 3
+b'true\r\n'
+SUM FORCE: -1.5899448446639073
+i : 4
+b'true\r\n'
+SUM FORCE: -1.8163985576750905
+i : 5
+b'true\r\n'
+SUM FORCE: -1.9892444608266677
+i : 6
+b'true\r\n'
+SUM FORCE: -1.9516385719804712
+i : 7
+b'true\r\n'
+SUM FORCE: -1.9864067742159106
+i : 8
+b'true\r\n'
+SUM FORCE: -1.9751060490809564
+i : 9
+b'true\r\n'
+SUM FORCE: -1.9145830063736335
+i : 10
+b'true\r\n'
+SUM FORCE: -2.0296146306558516
+i : 11
+b'true\r\n'
+SUM FORCE: -2.0327534726222174
+i : 12
+b'true\r\n'
+SUM FORCE: -2.006675738690474
+SUM FORCE: -2.0649132150051206
+i : 14
+b'true\r\n'
+SUM FORCE: -2.1138162847469455
+i : 15
+b'true\r\n'
+SUM FORCE: -2.182454842877551
+i : 16
+b'true\r\n'
+SUM FORCE: -2.0682506829101026
+i : 17
+b'true\r\n'
+SUM FORCE: -2.1552901576494654
+i : 18
+b'true\r\n'
+SUM FORCE: -2.0346861205148894
+i : 19
+Traceback (most recent call last):
+  File "c:\Users\BA-Project Niclas\Desktop\acquiring-robot-us-data-main\acquiring-robot-us-data-main\acquireUSdataWithRobot_getStarted.py", line 555, in <module>
+    print('distance:', distance)
+                       ^^^^^^^^
+NameError: name 'distance' is not defined. Did you mean: 'isinstance'?
+PS C:\Users\BA-Project Niclas> & "C:/Users/BA-Project Niclas/AppData/Local/Programs/Python/Python311/python.exe" "c:/Users/BA-Project Niclas/Desktop/acquiring-robot-us-data-main/acquiring-robot-us-data-main/acquireUSdataWithRobot_getStarted.py"
+b'false\r\n'
+b'true\r\n'
+b'true\r\n'
+b'true\r\n'
+b'true\r\n'
+b'true\r\n'
+b'true\r\n'
+b'true\r\n'
+b'true\r\n'
+startPoseTool:  [[-7.07837224e-01  1.33072200e-04 -7.06361994e-01  1.07456000e+03]
+ [-3.73145933e-04  9.99999772e-01  5.62312578e-04 -9.94801772e+01]
+ [ 7.06361908e-01  6.61614500e-04 -7.07837013e-01 -1.37124020e+02]
+ [ 0.00000000e+00  0.00000000e+00  0.00000000e+00  1.00000000e+00]]
+b'true\r\n'
+jointTorques:   [[ -3.25039584 -52.24560983   2.48881987  18.9500699   -0.11620949
+   -0.42152837  -0.24664249]]
+jointExtTorques:   [[ -3.25039584 -52.24560983   2.48881987  18.9500699   -0.11620949
+   -0.42152837  -0.24664249]]
+Position reached
+b'true\r\n'
+move strength of World in z direction :20
+move strength of World in x direction :20
+incline in degress :45
+circle in degress :0
+b'true\r\n'
+finish incline
+b'true\r\n'
+SUM FORCE: 0.9486291347846474
+i : 0
+b'true\r\n'
+SUM FORCE: -0.5823767926622874
+i : 1
+b'true\r\n'
+SUM FORCE: -1.2724293141681504
+i : 2
+b'true\r\n'
+SUM FORCE: -1.449895675571417
+i : 3
+b'true\r\n'
+SUM FORCE: -1.7399278604148507
+i : 4
+b'true\r\n'
+SUM FORCE: -1.818838357947883
+i : 5
+b'true\r\n'
+SUM FORCE: -2.1096353182002137
+i : 6
+b'true\r\n'
+SUM FORCE: -1.9633722461046972
+i : 7
+b'true\r\n'
+SUM FORCE: -2.0176105308437338
+i : 8
+b'true\r\n'
+SUM FORCE: -1.9405614869395744
+i : 9
+b'true\r\n'
+SUM FORCE: -1.990946458030832
+i : 10
+b'true\r\n'
+SUM FORCE: -2.07044754619501
+i : 11
+b'true\r\n'
+SUM FORCE: -2.0711386088046666
+i : 12
+b'true\r\n'
+SUM FORCE: -2.103357808329851
+SUM FORCE: -2.1431779934535804
+i : 14
+b'true\r\n'
+SUM FORCE: -2.0908665029737388
+i : 15
+b'true\r\n'
+SUM FORCE: -2.140945388171999
+i : 16
+b'true\r\n'
+SUM FORCE: -2.2001863209433985
+i : 17
+b'true\r\n'
+SUM FORCE: -2.241001013807141
+i : 18
+b'true\r\n'
+SUM FORCE: -2.173088105913357
+i : 19
+Traceback (most recent call last):
+  File "c:\Users\BA-Project Niclas\Desktop\acquiring-robot-us-data-main\acquiring-robot-us-data-main\acquireUSdataWithRobot_getStarted.py", line 555, in <module>
+    print('distance:', distance)
+                       ^^^^^^^^
+NameError: name 'distance' is not defined. Did you mean: 'isinstance'?
+PS C:\Users\BA-Project Niclas> & "C:/Users/BA-Project Niclas/AppData/Local/Programs/Python/Python311/python.exe" "c:/Users/BA-Project Niclas/Desktop/acquiring-robot-us-data-main/acquiring-robot-us-data-main/acquireUSdataWithRobot_getStarted.py"
+b'false\r\n'
+b'true\r\n'
+b'true\r\n'
+b'true\r\n'
+b'true\r\n'
+b'true\r\n'
+b'true\r\n'
+b'true\r\n'
+b'true\r\n'
+startPoseTool:  [[-7.08383098e-01  6.52710300e-04 -7.05814268e-01  1.07465266e+03]
+ [ 2.39401645e-04  9.99999737e-01  6.84471315e-04 -9.97450170e+01]
+ [ 7.05814529e-01  3.15900900e-04 -7.08383068e-01 -1.36830153e+02]
+ [ 0.00000000e+00  0.00000000e+00  0.00000000e+00  1.00000000e+00]]
+b'true\r\n'
+jointTorques:   [[ -3.22619934 -52.31416656   2.45800674  18.94918953  -0.11973099
+   -0.4282034   -0.24697624]]
+jointExtTorques:   [[ -3.22619934 -52.31416656   2.45800674  18.94918953  -0.11973099
+   -0.4282034   -0.24697624]]
+Position reached
+b'true\r\n'
+move strength of World in z direction :20
+move strength of World in x direction :20
+incline in degress :45
+circle in degress :0
+b'true\r\n'
+finish incline
+b'true\r\n'
+SUM FORCE: 1.110768012516891
+i : 0
+b'true\r\n'
+SUM FORCE: -0.638632060577514
+i : 1
+b'true\r\n'
+SUM FORCE: -1.1870482220707443
+i : 2
+b'true\r\n'
+SUM FORCE: -1.4011030781121554
+i : 3
+b'true\r\n'
+SUM FORCE: -1.5842475957104876
+i : 4
+b'true\r\n'
+SUM FORCE: -1.8540228112684398
+i : 5
+b'true\r\n'
+SUM FORCE: -2.0048271180745756
+i : 6
+b'true\r\n'
+SUM FORCE: -1.7067290974466136
+i : 7
+b'true\r\n'
+SUM FORCE: -1.9988429093318858
+i : 8
+b'true\r\n'
+SUM FORCE: -2.049719715784298
+i : 9
+b'true\r\n'
+SUM FORCE: -1.8940968493181791
+i : 10
+b'true\r\n'
+SUM FORCE: -1.9830874380977968
+i : 11
+b'true\r\n'
+SUM FORCE: -2.024232548785283
+i : 12
+b'true\r\n'
+SUM FORCE: -1.9759488097335252
+i : 13
+b'true\r\n'
+SUM FORCE: -2.093231911666702
+i : 14
+b'true\r\n'
+SUM FORCE: -2.111683090475994
+i : 15
+b'true\r\n'
+SUM FORCE: -2.0836561631277624
+i : 16
+b'true\r\n'
+SUM FORCE: -2.0932763299995383
+i : 17
+b'true\r\n'
+SUM FORCE: -2.2986792847337845
+i : 18
+b'true\r\n'
+SUM FORCE: -2.211713950763164
+i : 19
+Traceback (most recent call last):
+  File "c:\Users\BA-Project Niclas\Desktop\acquiring-robot-us-data-main\acquiring-robot-us-data-main\acquireUSdataWithRobot_getStarted.py", line 555, in <module>
+    print('distance:', distance)
+                       ^^^^^^^^
+NameError: name 'distance' is not defined. Did you mean: 'isinstance'?
